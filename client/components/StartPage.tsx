@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import { getGreeting } from '../apiClient.ts'
 import { useQuery } from '@tanstack/react-query'
+import EventItem from './EventItem.tsx'
 
+const eventDic = {
+  title: 'this is a title from a dictionary'
+}
 
 const Home = () => {
   const [count, setCount] = useState(0)
@@ -17,6 +21,12 @@ const Home = () => {
   return (
     <>
       {count}
+      {EventItem(eventDic)}
+      {EventItem(eventDic)}
+      {EventItem(eventDic)}
+      {EventItem(eventDic)}
+      {EventItem(eventDic)}
+      {EventItem(eventDic)}
       <div className="box">I'm in a box.</div>
       <h1 className="title is-1">{greeting}</h1>
       {isError && (

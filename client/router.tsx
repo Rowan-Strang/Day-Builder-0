@@ -5,12 +5,12 @@ import {
   Route,
 } from 'react-router-dom'
 import Layout from './components/Layout'
-import Home from './components/Home'
+import StartPage from './components/StartPage'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route index element={<Home />} />
+      <Route index element={<StartPage />} />
     </Route>,
   ),
 )
