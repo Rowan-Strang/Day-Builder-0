@@ -1,13 +1,25 @@
-const EventItem = (eventDic) => {
-const Title = eventDic.title
-const startTime = eventdic.startTime
-const finishTime = eventdic.finishTime
-const location = eventdic.location
+import {Event} from '../../models/Event.ts'
+
+const EventItem = (eventDic: Event) => {
+
 
   return (
-    <>
-      <div className="box">
-      <h3>An Event! An Event {eventDic.title}</h3>
+<>
+      <div className="box event-box">
+        <div className="columns is-mobile is-multiline">
+          <div className="column is-half">
+            <p className="event-start-time">{eventDic.startTime}</p>
+          </div>
+          <div className="column is-half has-text-right">
+            <h1 className="title is-4 event-title">{eventDic.title}</h1>
+          </div>
+          <div className="column is-half">
+            <p className="event-end-time">{eventDic.finishTime}</p>
+          </div>
+          <div className="column is-half has-text-right">
+            <p className="event-location">{eventDic.location}</p>
+          </div>
+        </div>
       </div>
     </>
   )
