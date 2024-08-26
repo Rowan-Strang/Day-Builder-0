@@ -2,7 +2,7 @@ export interface Event{
 title: string
 startTime: string
 finishTime: string
-locaton: string
+location: string
 }
 
 
